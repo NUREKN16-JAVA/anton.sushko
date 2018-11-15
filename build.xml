@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="UserManagement" basedir="." default="test">
+
+    
+        <property name="build-dir" value="${basedir}/target"/>
+        
+        <property name="classes-dir" value="${build-dir}/classes"/>
+        
+        <property name="main-java-dir" value="${basedir}/src/main/java"/>
+        
+        <property name="test-java-dir" value="${basedir}/src/test/java"/>
+        
+        <property name="lib-dir" value="${basedir}/lib"/>
+
+        
+        <target name="clean">
+            
+            <delete dir="${build-dir}" failonerror="no"/>
+        </target>
+
+        <target name="init" depends="clean">
+            
+            <mkdir dir="${build-dir}"/>
+            <mkdir dir="${classes-dir}"/>
+        </target>
+
+        
+        <target name="compile" depends="init">
+            
+            <javac srcdir="${main-java-dir}" destdir="${build-dir}" includeantruntime="false"/>
+        </target>
+
+        
+        <target name="test-compile" depends="compile">
+            
+            <javac includeantruntime="false" srcdir="${test-java-dir}" destdir="${build-dir}">
+                
+            	<classpath>
+            		
+            	    <path id="org.junit" location="C:\Users\Sushko\.p2\pool\plugins\org.junit_4.12.0.v201504281640/junit.jar" />
+            	 
+            	</classpath>
+            	
+                <classpath >
+                	<pathelement location="${build-dir}"/>
+                </classpath>
+            </javac>
+        </target>
+	
+		<target name="test" depends="test-compile">
+			<junit printsummary="yes">
+			  <classpath>
+			    <pathelement location="${build-dir}"/>
+			  </classpath>
+
+			  <formatter type="plain"/>
+
+			  <batchtest fork="yes" todir="${test-java-dir}">
+			    <fileset dir="${test-java-dir}">
+			      <include name="**/*Test*.java"/>
+			    </fileset>
+			  </batchtest>
+			</junit>
+		</target>
+	
+    </project>
