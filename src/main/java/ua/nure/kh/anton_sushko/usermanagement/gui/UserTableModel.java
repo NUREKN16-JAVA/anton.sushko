@@ -12,7 +12,7 @@ import ua.nure.kh.anton_sushko.usermanagement.util.Messages;
 public class UserTableModel extends AbstractTableModel {
  
 private static final long serialVersionUID = 1L;
-private static final String[] COLUMN_NAMES = {Messages.getString("UserTableModel.id"), Messages.getString("UserTableModel.first_name"), Messages.getString("UserTableModel.last_name")}; //$NON-NLS-2$ //$NON-NLS-3$
+private static final String[] COLUMN_NAMES = {Messages.getString("UserTableModel.id"), Messages.getString("UserTableModel.first_name"), Messages.getString("UserTableModel.last_name")};
 private static final Class<?>[] COLUMN_CLASSES = {Long.class,String.class,String.class};
 private List<User> users= null;
   
