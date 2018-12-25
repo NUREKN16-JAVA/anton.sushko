@@ -4,7 +4,7 @@
     
     <servlet>
         <servlet-name>Browse Servlet</servlet-name>
-        <servlet-class>ua.nure.kn.shalamov.usermanagement.web.BrowseServlet</servlet-class>
+        <servlet-class>ua.nure.kh.anton_sushko.usermanagement.web.BrowseServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -14,7 +14,7 @@
     
     <servlet>
         <servlet-name>Edit Servlet</servlet-name>
-        <servlet-class>ua.nure.kn.shalamov.usermanagement.web.EditServlet</servlet-class>
+        <servlet-class>ua.nure.kh.anton_sushko.usermanagement.web.EditServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -24,7 +24,7 @@
     
     <servlet>
         <servlet-name>Add Servlet</servlet-name>
-        <servlet-class>ua.nure.kn.shalamov.usermanagement.web.AddServlet</servlet-class>
+        <servlet-class>ua.nure.kh.anton_sushko.usermanagement.web.AddServlet</servlet-class>
     </servlet>
     
     <servlet-mapping>
@@ -34,7 +34,7 @@
     
     <servlet>
         <servlet-name>Details Servlet</servlet-name>
-        <servlet-class>ua.nure.kn.shalamov.usermanagement.web.DetailsServlet</servlet-class>
+        <servlet-class>ua.nure.kh.anton_sushko.usermanagement.web.DetailsServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Details Servlet</servlet-name>
